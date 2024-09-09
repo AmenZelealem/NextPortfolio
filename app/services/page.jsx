@@ -1,5 +1,5 @@
 "use client";
-import { BsArrowDownRight } from "react-icons/bs"
+import { BsArrowDownRight,BsArrowRight } from "react-icons/bs"
 import Link from "next/link";
 import { Description } from "@radix-ui/react-dialog"
 
@@ -7,28 +7,28 @@ const services = [
     {
         num: '01',
         title: "Web Development",
-        description: "lorem  ipsum dolor sit amet consecteur anvabuvbaevhbvifev. Eaque tenetur.",
+        description: "I create responsive and user-friendly websites tailored to your business needs. My web development services ensure a seamless online experience for your users.",
         href: ""
     },
     {
         num: '02',
         title: "UI/UX Design",
-        description: "lorem  ipsum dolor sit amet consecteur anvabuvbaevhbvifev. Eaque tenetur.",
+        description: "I focus on creating intuitive and engaging user interfaces. By prioritizing user experience, I enhance satisfaction and retention.",
         href: ""
     },
     {
         num: '03',
         title: "Logo Design",
-        description: "lorem  ipsum dolor sit amet consecteur anvabuvbaevhbvifev. Eaque tenetur.",
+        description: "I design unique and memorable logos that reflect your brand's identity. My logo design process combines creativity and strategy to make a lasting impression.",
         href: ""
     },
     {
         num: '04',
         title: "Integrations",
-        description: "lorem  ipsum dolor sit amet consecteur anvabuvbaevhbvifev. Eaque tenetur.",
+        description: "I specialize in integrating various tools and platforms to streamline your business processes. My integration services enhance functionality and improve efficiency.",
         href: ""
     }
-]
+];
 
 import { motion } from "framer-motion"
 

@@ -13,15 +13,15 @@ import {
 
 // About data
 const about = {
-  title: 'About me',
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa reiciendis itaque non. Perspiciatis, voluptatum! Reiciendis, asperiores!",
+  title: 'About Me',
+  description: "I am a passionate software developer with a focus on creating efficient and scalable web applications. With over 2 years of experience in the tech industry, I thrive on solving complex problems and continuously learning new technologies.",
   info: [
     { fieldName: "Name", fieldValue: "Amen Zelealem" },
-    { fieldName: "Phone", fieldValue: "(+251) 9 3663 9391" },
+    { fieldName: "Phone", fieldValue: "(+251) 936639391" },
     { fieldName: "Experience", fieldValue: "2+ years" },
     { fieldName: "Telegram", fieldValue: "@CaptainAmeNEL" },
     { fieldName: "Nationality", fieldValue: "Ethiopian 🇪🇹 " },
-    { fieldName: "Email", fieldValue: "amenzelealem@gmail.com" }, // Fixed email typo
+    { fieldName: "Email", fieldValue: "amenzelealem@gmail.com" },
     { fieldName: "Freelance", fieldValue: "Available" },
     { fieldName: "Languages", fieldValue: "Amharic, English" },
   ]
@@ -31,7 +31,7 @@ const about = {
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My Experience',
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa reiciendis itaque non. Perspiciatis, voluptatum! Reiciendis, asperiores!",
+  description: "I have worked with diverse teams to develop innovative solutions that improve user experiences and drive business growth. My roles have taught me the importance of collaboration and adaptability in a fast-paced environment.",
   items: [
     { company: "Amhara Bank P.L.C.", position: "Application Developer", duration: "November 2023 - Present" },
     { company: "Huawei Technologies Co.", position: "ICT Academy Ambassador", duration: "April 2022 - November 2023" },
@@ -44,7 +44,7 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My Education',
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa reiciendis itaque non. Perspiciatis, voluptatum! Reiciendis, asperiores!",
+  description: "I have completed rigorous training programs and gained a solid foundation in computer science and software development principles. My education has equipped me with the skills necessary to tackle real-world challenges.",
   items: [
     { institution: "Online Course Platform", degree: "Full Stack Web Development Bootcamp", duration: "2024" },
     { institution: "Online Course Platform", degree: "WSO2 Integration", duration: "2024" },
@@ -57,7 +57,7 @@ const education = {
 const skills = {
   icon: '/assets/resume/cap.svg',
   title: 'My Skills',
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa reiciendis itaque non. Perspiciatis, voluptatum! Reiciendis, asperiores!",
+  description: "I am proficient in a variety of programming languages and frameworks. I am constantly updating my skills to stay current with industry trends and best practices.",
   skillList: [
     { icon: <FaHtml5 />, name: "HTML 5" },
     { icon: <FaCss3 />, name: "CSS 3" },
@@ -65,7 +65,7 @@ const skills = {
     { icon: <FaNodeJs />, name: "Node.js" },
     { icon: <FaLaravel />, name: "Laravel" },
     { icon: <FaFigma />, name: "Figma" },
-    { icon: <FaJava />, name: "WSO2" },
+    { icon: <FaJava />, name: "Java" },
     { icon: <FaDocker />, name: "Docker" },
   ]
 };
@@ -149,15 +149,17 @@ const Resume = () => {
                   <h3 className='text-4xl font-bold'>{skills.title}</h3>
                   <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{skills.description}</p>
                 </div>
-                <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]'>
+                <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                   {skills.skillList.map((skill, index) => (
                     <li key={index}>
-                      <TooltipProvider>
+                      <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger>
-                            <div>{skill.icon}</div>
+                          <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group'>
+                            <div className='text-6xl group-hover:text-accent transition-all duration-300'>{skill.icon}</div>
                           </TooltipTrigger>
-                          <TooltipContent>{skill.name}</TooltipContent>
+                          <TooltipContent>
+                            <p className='capitalize'>{skill.name}</p>
+                          </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
                     </li>
@@ -167,11 +169,22 @@ const Resume = () => {
             </TabsContent>
 
             {/* About */}
-            <TabsContent value="about" className="w-full">
-              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left">
+              <div className='flex flex-col gap-[30px]'>
                 <h3 className='text-4xl font-bold'>{about.title}</h3>
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
-                {/* Render more about information if needed */}
+                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
+                  {about.info.map((item, index) => {
+                    return (
+                      <li key={index} className='flex items-center justify-center xl:justify-start gap-4'>
+                        <span className='text-white/60'>{item.fieldName}</span>
+                        <span className='text-xl'>{item.fieldValue}</span>
+                      </li>
+                    )
+                  })}
+                </ul>
               </div>
             </TabsContent>
           </div>
