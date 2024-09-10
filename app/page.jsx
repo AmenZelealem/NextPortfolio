@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
 // Components
@@ -6,6 +7,14 @@ import Photo from "@/components/Photo"
 import Stats from "@/components/Stats"
 
 const Home = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/Amen Zelealem Tadese CV.pdf'; // Update the path as necessary
+    link.download = 'Amen_Zelealem_CV.pdf'; // Specify the filename for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -32,6 +41,7 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
+                onClick={handleDownload}
               >
                 <span>Downlaod CV</span>
                 <FiDownload className="text-xl" />
@@ -41,8 +51,8 @@ const Home = () => {
                   containerStyles="flex gap-6"
                   iconStyles="w-9 h-9 border border-accent rounded-full flex 
                   justify-center items-center text-accent text-base hover:bg-accent 
-                  hover:text-primary hover:transition-all duration-500" 
-                  />
+                  hover:text-primary hover:transition-all duration-500"
+                />
               </div>
 
             </div>
@@ -51,11 +61,11 @@ const Home = () => {
 
           {/* {Photo} */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
-            <Photo/>
+            <Photo />
           </div>
         </div>
       </div>
-<Stats/>
+      <Stats />
 
     </section>
   )
