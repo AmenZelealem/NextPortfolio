@@ -18,8 +18,8 @@ const projects = [
     description: "A responsive personal portfolio showcasing my projects and skills. Built with HTML, CSS, and JavaScript, this site highlights my work and provides a platform for potential clients to contact me.",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
     image: '/assets/work/1.png',
-    live: 'https://myportfolio.com',
-    github: "https://github.com/myportfolio",
+    live: '',
+    github: "",
   },
   {
     num: '02',
@@ -28,8 +28,8 @@ const projects = [
     description: "An e-commerce application that allows users to browse products, add them to a cart, and make purchases. Developed using Laravel for the backend and Vue.js for the frontend, ensuring a seamless user experience.",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }, { name: "Laravel" }],
     image: '/assets/work/2.png',
-    live: 'https://myecommerce.com',
-    github: "https://github.com/myecommerce",
+    live: '',
+    github: "",
   },
   {
     num: '03',
@@ -38,8 +38,8 @@ const projects = [
     description: "A task management application that helps users organize and prioritize their daily tasks. Built with Next.js and Tailwind CSS, it features real-time updates and a user-friendly interface.",
     stack: [{ name: "Next.js" }, { name: "Tailwind CSS" }, { name: "Node.js" }],
     image: '/assets/work/3.png',
-    live: 'https://mytaskmanager.com',
-    github: "https://github.com/mytaskmanager",
+    live: '',
+    github: "",
   }
 ];
 
