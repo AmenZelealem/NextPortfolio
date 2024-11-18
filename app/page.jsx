@@ -9,7 +9,7 @@ import Stats from "@/components/Stats"
 const Home = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/assets/Amen Zelealem Tadese CV.pdf'; // Update the path as necessary
+    link.href = '/assets/Amen ZelealemCV.pdf'; // Update the path as necessary
     link.download = 'Amen_Zelealem_CV.pdf'; // Specify the filename for download
     document.body.appendChild(link);
     link.click();
