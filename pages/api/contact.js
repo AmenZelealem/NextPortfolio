@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: email,
-      to: process.env.EMAIL_USER, // Send to your email
+      to: "amenzelealem@gmail.com", // Send to your email
       subject: `Message from ${firstname} ${lastname} - ${service}`,
       text: `Phone: ${phone}\nMessage: ${message}`,
     };
@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       res.status(200).json({ message: "Message sent successfully!" });
     } catch (error) {
       console.error(error);
-      res.status(500).json({ error: "Error sending message." });
+      res.status(500).json({ error: "Error sending message.....", error });
     }
   } else {
     res.setHeader("Allow", ["POST"]);
